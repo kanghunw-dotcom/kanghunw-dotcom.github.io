@@ -1,0 +1,122 @@
+/* ========================================
+   나의 작은 소라게 키우기 · 다운로드 페이지
+   섹션별 수정 쉽게 그룹화
+   ======================================== */
+
+/* ---- Reset & Base ---- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #fff8ee;
+  --bg-soft: #fff;
+  --text: #3a2a1a;
+  --text-soft: #7a6a55;
+  --accent: #ff9b3d;
+  --accent-dark: #e07b18;
+  --kakao: #fee500;
+  --kakao-text: #191600;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --max-w: 980px;
+}
+
+html, body {
+  font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic",
+               "Noto Sans KR", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Hero ---- */
+.hero {
+  text-align: center;
+  padding: 64px 20px 48px;
+  background: linear-gradient(180deg, #fff3df 0%, var(--bg) 100%);
+}
+.hero-logo {
+  width: 160px; height: auto; margin: 0 auto 20px;
+}
+.hero-title {
+  font-size: 2rem; font-weight: 800; margin-bottom: 8px;
+}
+.hero-tagline {
+  color: var(--text-soft); font-size: 1.05rem; margin-bottom: 28px;
+}
+
+/* ---- CTA Buttons ---- */
+.cta-row {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 22px; border-radius: var(--radius); border: 0;
+  font-size: 1rem; font-weight: 700; cursor: pointer;
+  box-shadow: var(--shadow); transition: transform .12s ease;
+}
+.btn:hover { transform: translateY(-2px); text-decoration: none; }
+.btn-icon { font-size: 1.1em; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+}
+.btn-primary:hover { background: var(--accent-dark); color:#fff; }
+.btn-kakao {
+  background: var(--kakao); color: var(--kakao-text);
+}
+
+/* ---- Sections ---- */
+.section {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+.section-title {
+  font-size: 1.5rem; font-weight: 800;
+  margin-bottom: 24px; text-align: center;
+}
+
+/* ---- Video ---- */
+.video-wrap {
+  max-width: 720px; margin: 0 auto;
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); background: #000;
+}
+.video-wrap video { width: 100%; display: block; }
+
+/* ---- Gallery ---- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.gallery-item {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.gallery-item img { width: 100%; height: auto; }
+
+/* ---- Footer ---- */
+.footer {
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--text-soft);
+  font-size: .9rem;
+  border-top: 1px solid rgba(0,0,0,.06);
+  margin-top: 24px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .hero { padding: 48px 16px 36px; }
+  .hero-logo { width: 130px; }
+  .hero-title { font-size: 1.6rem; }
+  .btn { padding: 12px 18px; font-size: .95rem; }
+  .section { padding: 40px 16px; }
+}
