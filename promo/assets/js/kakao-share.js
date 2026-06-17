@@ -13,7 +13,7 @@
 const KAKAO_JS_KEY = '2655aa86b0569db990cacf3ad6015f34';       // ← 발급받은 JS 키
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kanghun.hermitcrab';
 const PAGE_URL = window.location.href;               // 현재 다운로드 페이지 URL
-const SHARE_IMAGE = new URL('../img/preview1.png', document.currentScript.src).href;
+const SHARE_IMAGE = new URL('../img/share-thumb.png', document.currentScript.src).href;
 
 // SDK 초기화 (한 번만)
 if (window.Kakao && !Kakao.isInitialized()) {
